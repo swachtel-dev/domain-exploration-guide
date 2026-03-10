@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Domain Exploration Guide | FINAN VIII</title>
+<style>
+  :root {
+    --bg: #fafaf9;
+    --card-bg: #fff;
+    --text: #1a1a1a;
+    --muted: #6b6b6b;
+    --accent: #1e3a5f;
+    --accent-light: #e8eef4;
+    --border: #e0ddd8;
+    --link: #1557a0;
+    --tag-bg: #f0ede8;
+    --tag-text: #4a4540;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+  }
+  h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 0.25rem;
+    letter-spacing: -0.02em;
+  }
+  .subtitle {
+    font-size: 1.05rem;
+    color: var(--muted);
+    margin-bottom: 2rem;
+    font-style: italic;
+  }
+  .intro {
+    font-size: 1.05rem;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .domain-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+  }
+  .domain-header {
+    padding: 1.25rem 1.5rem 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    user-select: none;
+  }
+  .domain-header:hover { background: var(--accent-light); }
+  .domain-number {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.2rem;
+  }
+  .domain-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 0.4rem;
+  }
+  .domain-tagline {
+    font-size: 0.95rem;
+    color: var(--muted);
+  }
+  .chevron {
+    font-size: 1.2rem;
+    color: var(--muted);
+    transition: transform 0.2s;
+    margin-top: 0.5rem;
+    flex-shrink: 0;
+    margin-left: 1rem;
+  }
+  .domain-card.open .chevron { transform: rotate(180deg); }
+  .domain-body {
+    display: none;
+    padding: 0 1.5rem 1.5rem;
+    border-top: 1px solid var(--border);
+  }
+  .domain-card.open .domain-body { display: block; }
+  .problem {
+    margin: 1.25rem 0;
+    padding-left: 1rem;
+    border-left: 3px solid var(--accent-light);
+  }
+  .problem-title {
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+  }
+  .problem p {
+    font-size: 0.95rem;
+    margin-bottom: 0;
+  }
+  .meta-section {
+    margin-top: 1.25rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+  }
+  .meta-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    margin-bottom: 0.4rem;
+  }
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 0.75rem;
+  }
+  .tag {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 0.78rem;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+    padding: 0.2rem 0.6rem;
+    border-radius: 3px;
+  }
+  .research-links {
+    list-style: none;
+    padding: 0;
+  }
+  .research-links li {
+    margin-bottom: 0.3rem;
+    font-size: 0.92rem;
+  }
+  .research-links a {
+    color: var(--link);
+    text-decoration: none;
+  }
+  .research-links a:hover { text-decoration: underline; }
+  .closing {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+  }
+  .closing h2 {
+    font-size: 1.2rem;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+  }
+  .closing ol {
+    padding-left: 1.5rem;
+  }
+  .closing li {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+  }
+  .closing li strong { color: var(--accent); }
+  @media (max-width: 600px) {
+    body { padding: 1rem; }
+    h1 { font-size: 1.5rem; }
+    .domain-title { font-size: 1.1rem; }
+    .domain-header { padding: 1rem; }
+    .domain-body { padding: 0 1rem 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Domain Exploration Guide</h1>
+<p class="subtitle">FINAN VIII: Future of Finance &mdash; Final Project</p>
+
+<div class="intro">
+<p>Six domains for your token proposal. Each contains example problems, connections to this semester's material, and research starting points. You are not limited to the problems listed here: use them to find a specific problem you can define precisely and address with a token mechanism.</p>
+</div>
+
+<!-- Domain 1 -->
+<div class="domain-card open">
+<div class="domain-header" onclick="this.parentElement.classList.toggle('open')">
+  <div>
+    <div class="domain-number">Domain 1</div>
+    <div class="domain-title">Financial Inclusion &amp; Payments</div>
+    <div class="domain-tagline">Cross-border transfers, credit access, payment processing</div>
+  </div>
+  <span class="chevron">&#9660;</span>
+</div>
+<div class="domain-body">
+  <div class="problem">
+    <div class="problem-title">Cross-border remittances</div>
+    <p>Migrant workers sent <a href="https://www.worldbank.org/en/news/press-release/2022/11/30/remittances-grow-5-percent-2022">$656 billion</a> to low- and middle-income countries in 2022, paying an average fee of <a href="https://remittanceprices.worldbank.org/">6.2%</a>. Existing solutions (Western Union, bank wires, mobile money, crypto bridges) each face adoption, compliance, or volatility barriers that keep fees stubbornly high.</p>
+  </div>
+  <div class="problem">
+    <div class="problem-title">Thin-file credit access</div>
+    <p><a href="https://www.worldbank.org/en/publication/globalfindex">1.4 billion adults globally</a> lack a bank account. In the US alone, 26 million adults are "credit invisible" with no file at the major bureaus. Alternative data approaches (you studied these in Unit 3) exist but remain centralized and non-portable across lenders.</p>
+  </div>
+  <div class="problem">
+    <div class="problem-title">SMB payment costs</div>
+    <p>Small merchants pay average card processing fees of <a href="https://www.federalreserve.gov/paymentsystems/regii-average-interchange-fee.htm">2.6%</a>, compressing margins on low-ticket transactions. Real-time settlement and lower-cost rails could redirect billions in economic activity, but switching costs remain high.</p>
+  </div>
+  <div class="meta-section">
+    <div class="meta-label">Course Connections</div>
+    <div class="tags">
+      <span class="tag">Unit 3: Algorithmic Lending</span>
+      <span class="tag">Unit 6: Fintech Analysis</span>
+      <span class="tag">Unit 7: CBDCs</span>
+    </div>
+    <div class="meta-label">Starting Research</div>
+    <ul class="research-links">
+      <li><a href="https://www.worldbank.org/en/publication/globalfindex">World Bank Global Findex</a></li>
+      <li><a href="https://remittanceprices.worldbank.org/">Remittance Prices Worldwide (World Bank)</a></li>
+      <li><a href="https://www.brookings.edu/topic/financial-inclusion/">Brookings Financial Inclusion Research</a></li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<!-- Domain 2 -->
+<div class="domain-card">
+<div class="domain-header" onclick="this.parentElement.classList.toggle('open')">
+  <div>
+    <div class="domain-number">Domain 2</div>
+    <div class="domain-title">Supply Chain &amp; Trade Finance</div>
+    <div class="domain-tagline">Provenance tracking, trade documents, agricultural certification</div>
+  </div>
+  <span class="chevron">&#9660;</span>
+</div>
+<div class="domain-body">
+  <div class="problem">
+    <div class="problem-title">Pharmaceutical authentication</div>
+    <p>The WHO estimates <a href="https://www.who.int/news-room/fact-sheets/detail/substandard-and-falsified-medical-products">1 in 10 medical products</a> in low- and middle-income countries is substandard or falsified. Serialization mandates generate tracking data, but that data is siloed across manufacturers, distributors, and pharmacies with no shared trust layer.</p>
+  </div>
+  <div class="problem">
+    <div class="problem-title">Trade finance accessibility</div>
+    <p>The global trade finance gap exceeds <a href="https://www.adb.org/publications/2023-trade-finance-gaps-growth-jobs-survey">$2.5 trillion</a> (Asian Development Bank), hitting SMEs in emerging markets hardest. Documentary credit processes involve 5-10 intermediaries and take 5-10 days to settle.</p>
+  </div>
+  <div class="problem">
+    <div class="problem-title">Agricultural provenance</div>
+    <p>Fair trade and organic certifications command price premiums, but verification is difficult and fraud is common. Coffee buyers pay premiums that may not reach farmers. Tokenized provenance could create an auditable chain from farm to consumer.</p>
+  </div>
+  <div class="meta-section">
+    <div class="meta-label">Course Connections</div>
+    <div class="tags">
+      <span class="tag">Unit 8: Tokenization &amp; De-dollarization</span>
+    </div>
+    <div class="meta-label">Starting Research</div>
+    <ul class="research-links">
+      <li><a href="https://www.adb.org/publications/2023-trade-finance-gaps-growth-jobs-survey">ADB Trade Finance Gap Report</a></li>
+      <li><a href="https://www.who.int/news-room/fact-sheets/detail/substandard-and-falsified-medical-products">WHO: Substandard &amp; Falsified Medical Products</a></li>
+      <li><a href="https://www.dsi.iccwbo.org/">ICC Digital Standards Initiative</a></li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<!-- Domain 3 -->
+<div class="domain-card">
+<div class="domain-header" onclick="this.parentElement.classList.toggle('open')">
+  <div>
+    <div class="domain-number">Domain 3</div>
+    <div class="domain-title">Capital Markets &amp; Asset Tokenization</div>
+    <div class="domain-tagline">Fractional ownership, private equity access, illiquid asset markets</div>
+  </div>
+  <span class="chevron">&#9660;</span>
+</div>
+<div class="domain-body">
+  <div class="problem">
+    <div class="problem-title">Fractional real estate</div>
+    <p>The median US home price exceeds <a href="https://fred.stlouisfed.org/series/MSPUS">$400,000</a>. REITs offer some access but limit individual property selection. Tokenized fractional ownership could lower barriers while preserving investor control over specific assets.</p>
+  </div>
+  <div class="problem">
+    <div class="problem-title">Private equity access</div>
+    <p>Global PE exceeds <a href="https://www.mckinsey.com/industries/private-equity-and-principal-investors/our-insights/global-private-markets-review">$4.7 trillion in AUM</a>, but accredited investor requirements lock out the vast majority of the population. Tokenized fund shares with programmable compliance could democratize access while maintaining regulatory guardrails.</p>
+  </div>
+  <div class="problem">
+    <div class="problem-title">Illiquid asset secondary markets</div>
+    <p>Art, collectibles, private company shares, and similar assets have no efficient secondary market. Holders face years-long lock-ups with no price discovery. Tokenization could create liquid markets for fundamentally illiquid assets.</p>
+  </div>
+  <div class="meta-section">
+    <div class="meta-label">Course Connections</div>
+    <div class="tags">
+      <span class="tag">Unit 5: DeFi &amp; Smart Contracts</span>
+      <span class="tag">Unit 8: Tokenized Assets</span>
+    </div>
+    <div class="meta-label">Starting Research</div>
+    <ul class="research-links">
+      <li><a href="https://www.mckinsey.com/industries/private-equity-and-principal-investors/our-insights/global-private-markets-review">McKinsey Global Private Markets Review</a></li>
+      <li><a href="https://fred.stlouisfed.org/series/MSPUS">FRED: Median US Home Price</a></li>
+      <li><a href="https://www.bcg.com/publications/2022/relevance-of-on-chain-asset-tokenization">BCG: On-Chain Asset Tokenization</a></li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<!-- Domain 4 -->
+<div class="domain-card">
+<div class="domain-header" onclick="this.parentElement.classList.toggle('open')">
+  <div>
+    <div class="domain-number">Domain 4</div>
+    <div class="domain-title">Digital Identity &amp; Credentials</div>
+    <div class="domain-tagline">KYC compliance, credential portability, self-sovereign identity</div>
+  </div>
+  <span class="chevron">&#9660;</span>
+</div>
+<div class="domain-body">
+  <div class="problem">
+    <div class="problem-title">KYC/AML compliance costs</div>
+    <p>Financial institutions spend an estimated <a href="https://www.refinitiv.com/en/resources/special-report/true-cost-of-financial-crime-compliance-global-report">$214 billion annually</a> on compliance. Each institution independently verifies the same customer from scratch. A shared, privacy-preserving verification layer could eliminate duplicated work without centralizing sensitive data.</p>
+  </div>
+  <div class="problem">
+    <div class="problem-title">Educational credential portability</div>
+    <p>Students who transfer institutions, pursue continuing education, or seek employment internationally face months of manual transcript verification. No widely adopted system allows verified credentials to travel across borders and institutions.</p>
+  </div>
+  <div class="problem">
+    <div class="problem-title">Self-sovereign identity for the unbanked</div>
+    <p>Many of the 1.4 billion unbanked adults worldwide lack government-issued identification, which is a prerequisite for opening any financial account. Decentralized identity systems could allow individuals to build verifiable reputations without depending on a single issuing authority.</p>
+  </div>
+  <div class="meta-section">
+    <div class="meta-label">Course Connections</div>
+    <div class="tags">
+      <span class="tag">Unit 5: Blockchain Fundamentals</span>
+      <span class="tag">Unit 7: CBDC Privacy &amp; KYC</span>
+    </div>
+    <div class="meta-label">Starting Research</div>
+    <ul class="research-links">
+      <li><a href="https://www.weforum.org/projects/digital-identity">WEF: Digital Identity</a></li>
+      <li><a href="https://www.refinitiv.com/en/resources/special-report/true-cost-of-financial-crime-compliance-global-report">Refinitiv: True Cost of Compliance</a></li>
+      <li><a href="https://www.w3.org/TR/did-core/">W3C: Decentralized Identifiers</a></li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<!-- Domain 5 -->
+<div class="domain-card">
+<div class="domain-header" onclick="this.parentElement.classList.toggle('open')">
+  <div>
+    <div class="domain-number">Domain 5</div>
+    <div class="domain-title">Energy &amp; Environmental Markets</div>
+    <div class="domain-tagline">Carbon credits, renewable energy certificates, peer-to-peer trading</div>
+  </div>
+  <span class="chevron">&#9660;</span>
+</div>
+<div class="domain-body">
+  <div class="problem">
+    <div class="problem-title">Carbon credit integrity</div>
+    <p>The voluntary carbon market reached <a href="https://www.ecosystemmarketplace.com/publications/state-of-the-voluntary-carbon-markets-2023/">$2 billion in 2022</a>, but investigations have found that many offset categories may not represent real emission reductions. Tokenized carbon credits with on-chain verification could establish provenance and prevent double-counting.</p>
+  </div>
+  <div class="problem">
+    <div class="problem-title">Renewable energy certificate trading</div>
+    <p>RECs verify renewable generation, but markets are fragmented and small generators are often excluded. Tokenized RECs could enable real-time settlement and lower participation barriers for rooftop solar and community installations.</p>
+  </div>
+  <div class="problem">
+    <div class="problem-title">Peer-to-peer energy trading</div>
+    <p>Households with rooftop solar generate surplus electricity that feeds back to the grid at wholesale rates. Smart-contract-based peer-to-peer trading could capture more value for producers while lowering costs for nearby consumers.</p>
+  </div>
+  <div class="meta-section">
+    <div class="meta-label">Course Connections</div>
+    <div class="tags">
+      <span class="tag">Unit 5: Smart Contracts</span>
+      <span class="tag">Unit 8: Tokenized Commodities</span>
+    </div>
+    <div class="meta-label">Starting Research</div>
+    <ul class="research-links">
+      <li><a href="https://www.ecosystemmarketplace.com/publications/state-of-the-voluntary-carbon-markets-2023/">Ecosystem Marketplace: VCM Report</a></li>
+      <li><a href="https://www.iea.org/topics/renewables">IEA: Renewables Tracking</a></li>
+      <li><a href="https://www.brooklyn.energy/">Brooklyn Microgrid</a></li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<!-- Domain 6 -->
+<div class="domain-card">
+<div class="domain-header" onclick="this.parentElement.classList.toggle('open')">
+  <div>
+    <div class="domain-number">Domain 6</div>
+    <div class="domain-title">Governance &amp; Community Coordination</div>
+    <div class="domain-tagline">Public goods funding, community investment, transparent giving</div>
+  </div>
+  <span class="chevron">&#9660;</span>
+</div>
+<div class="domain-body">
+  <div class="problem">
+    <div class="problem-title">Public goods funding</div>
+    <p>Open-source software, academic research, and public infrastructure benefit everyone but are chronically underfunded because contributors cannot capture the value they create. <a href="https://wtfisqf.com/">Quadratic funding</a> (pioneered by Gitcoin) demonstrates one token-based approach, but gaming and low adoption remain persistent challenges.</p>
+  </div>
+  <div class="problem">
+    <div class="problem-title">Community investment coordination</div>
+    <p>Neighborhood-level investment decisions (parks, infrastructure, small business support) are typically made by centralized authorities with limited community input. Token-based governance could give residents direct, proportional voice in how community development funds are allocated.</p>
+  </div>
+  <div class="problem">
+    <div class="problem-title">Transparent charitable giving</div>
+    <p>US charitable giving reached <a href="https://givingusa.org/">$557 billion in 2023</a>, but donors have limited visibility into how funds are spent downstream. On-chain donation tracking with milestone-based disbursement could increase accountability without requiring a centralized auditor.</p>
+  </div>
+  <div class="meta-section">
+    <div class="meta-label">Course Connections</div>
+    <div class="tags">
+      <span class="tag">Unit 4: Collective Market Action</span>
+      <span class="tag">Unit 5: DAOs &amp; DeFi Governance</span>
+    </div>
+    <div class="meta-label">Starting Research</div>
+    <ul class="research-links">
+      <li><a href="https://wtfisqf.com/">WTF is QF? (Quadratic Funding)</a></li>
+      <li><a href="https://givingusa.org/">Giving USA Annual Report</a></li>
+      <li><a href="https://vitalik.eth.limo/general/2021/11/16/retro1.html">Buterin: Retroactive Public Goods Funding</a></li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<!-- Closing -->
+<div class="closing">
+<h2>Choosing Well</h2>
+<p>The strongest proposals share three characteristics:</p>
+<ol>
+  <li><strong>The problem is specific and quantified.</strong> "Healthcare is broken" is not a problem statement. "80% of clinical trials take 6+ months to recruit participants, adding $1.3M per month in delays" is.</li>
+  <li><strong>The token mechanism addresses the problem directly.</strong> The token should solve the specific incentive misalignment, trust deficit, or coordination failure you identified. If you remove the token from your design and everything still works, it was never needed.</li>
+  <li><strong>The student cares about the domain.</strong> You will spend five units on this project. Genuine interest in the problem produces better research, sharper analysis, and a more compelling white paper.</li>
+</ol>
+</div>
+
+<script>
+// All cards start closed except the first
+document.querySelectorAll('.domain-card').forEach((card, i) => {
+  if (i > 0) card.classList.remove('open');
+});
+</script>
+
+</body>
+</html>
