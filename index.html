@@ -141,7 +141,7 @@
     padding: 0;
   }
   .research-links li {
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.4rem;
     font-size: 0.92rem;
   }
   .research-links a {
@@ -149,12 +149,23 @@
     text-decoration: none;
   }
   .research-links a:hover { text-decoration: underline; }
+  .link-desc {
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+  .research-note {
+    font-size: 0.88rem;
+    color: var(--muted);
+    margin-bottom: 0.5rem;
+    font-style: italic;
+  }
   .closing {
     background: var(--card-bg);
     border: 1px solid var(--border);
     border-radius: 6px;
     padding: 1.5rem;
     margin-top: 2rem;
+    margin-bottom: 2rem;
   }
   .closing h2 {
     font-size: 1.2rem;
@@ -184,7 +195,7 @@
 <p class="subtitle">FINAN VIII: Future of Finance &mdash; Final Project</p>
 
 <div class="intro">
-<p><b>How to use this guide:</b> Start by reading all six domain summaries below (click each card to expand it). Get the full landscape before committing to one domain. Then dig into the one or two that interest you most. Each domain includes two to three example problems with real data, connections to course units you have already completed, and research links to help you get started.</p>
+<p><b>How to use this guide:</b> Start by reading all six domain summaries below (click each card to expand it). Get the full landscape before committing to one domain. Then dig into the one or two that interest you most. Each domain includes two to three example problems with real data, connections to course units you have already completed, and links to help you start researching.</p>
 <p>Choosing one of the 18 example problems listed below is completely fine; many strong proposals start there. You can also narrow a listed problem further, combine elements from different examples, or find a related problem within the same domain. What matters is that your final problem is specific, quantifiable, and addressable by a token mechanism.</p>
 </div>
 
@@ -216,24 +227,24 @@
   </div>
   <div class="problem">
     <div class="problem-title">Thin-file credit access</div>
-    <p><a href="https://www.worldbank.org/en/publication/globalfindex">1.4 billion adults globally</a> lack a bank account. In the US alone, 26 million adults are "credit invisible" with no file at the major bureaus. Alternative data approaches (you studied these in Unit 3) exist but remain centralized and non-portable across lenders.</p>
+    <p>An estimated 1.4 billion adults globally lack a bank account. In the US alone, 26 million adults are "credit invisible" with no file at the major bureaus. Alternative data approaches (you studied these in Unit 3) exist but remain centralized and non-portable across lenders.</p>
   </div>
   <div class="problem">
-    <div class="problem-title">SMB payment costs</div>
+    <div class="problem-title">Small business payment costs</div>
     <p>Small merchants pay average card processing fees of <a href="https://www.federalreserve.gov/paymentsystems/regii-average-interchange-fee.htm">2.6%</a>, compressing margins on low-ticket transactions. Real-time settlement and lower-cost rails could redirect billions in economic activity, but switching costs remain high.</p>
   </div>
   <div class="meta-section">
     <div class="meta-label">Course Connections</div>
     <div class="tags">
-      <span class="tag">Unit 3: Algorithmic Lending</span>
-      <span class="tag">Unit 6: Fintech Analysis</span>
+      <span class="tag">Unit 3: Algorithmic Lending &amp; Credit Access</span>
+      <span class="tag">Unit 6: Fintech Company Analysis</span>
       <span class="tag">Unit 7: CBDCs</span>
     </div>
-    <div class="meta-label">Starting Research</div>
+    <div class="meta-label">Where to Start Reading</div>
+    <p class="research-note">Use these to understand the landscape before choosing a specific problem.</p>
     <ul class="research-links">
-      <li><a href="https://www.worldbank.org/en/publication/globalfindex">World Bank Global Findex</a></li>
-      <li><a href="https://remittanceprices.worldbank.org/">Remittance Prices Worldwide (World Bank)</a></li>
-      <li><a href="https://www.brookings.edu/topic/financial-inclusion/">Brookings Financial Inclusion Research</a></li>
+      <li><a href="https://remittanceprices.worldbank.org/">Remittance Prices Worldwide</a> <span class="link-desc">&mdash; interactive tool: compare real transfer costs between any two countries</span></li>
+      <li><a href="https://www.cgap.org/">CGAP (Financial Inclusion Research)</a> <span class="link-desc">&mdash; case studies and data on how financial services reach underserved populations</span></li>
     </ul>
   </div>
 </div>
@@ -256,7 +267,7 @@
   </div>
   <div class="problem">
     <div class="problem-title">Trade finance accessibility</div>
-    <p>The global trade finance gap exceeds <a href="https://www.adb.org/publications/2023-trade-finance-gaps-growth-jobs-survey">$2.5 trillion</a> (Asian Development Bank), hitting SMEs in emerging markets hardest. Documentary credit processes involve 5-10 intermediaries and take 5-10 days to settle.</p>
+    <p>The global trade finance gap exceeds <a href="https://www.adb.org/publications/2023-trade-finance-gaps-growth-jobs-survey">$2.5 trillion</a> (Asian Development Bank), hitting small and medium-sized enterprises in emerging markets hardest. Documentary credit processes involve 5-10 intermediaries and take 5-10 days to settle.</p>
   </div>
   <div class="problem">
     <div class="problem-title">Agricultural provenance</div>
@@ -265,13 +276,14 @@
   <div class="meta-section">
     <div class="meta-label">Course Connections</div>
     <div class="tags">
-      <span class="tag">Unit 8: Tokenization &amp; De-dollarization</span>
+      <span class="tag">Unit 8: De-dollarization &amp; Digital Assets</span>
     </div>
-    <div class="meta-label">Starting Research</div>
+    <div class="meta-label">Where to Start Reading</div>
+    <p class="research-note">Use these to understand the landscape before choosing a specific problem.</p>
     <ul class="research-links">
-      <li><a href="https://www.adb.org/publications/2023-trade-finance-gaps-growth-jobs-survey">ADB Trade Finance Gap Report</a></li>
-      <li><a href="https://www.who.int/news-room/fact-sheets/detail/substandard-and-falsified-medical-products">WHO: Substandard &amp; Falsified Medical Products</a></li>
-      <li><a href="https://www.dsi.iccwbo.org/">ICC Digital Standards Initiative</a></li>
+      <li><a href="https://www.who.int/news-room/fact-sheets/detail/substandard-and-falsified-medical-products">WHO: Substandard &amp; Falsified Medical Products</a> <span class="link-desc">&mdash; short fact sheet with global data on counterfeit medicines</span></li>
+      <li><a href="https://www.adb.org/publications/2023-trade-finance-gaps-growth-jobs-survey">ADB: Trade Finance Gaps Report</a> <span class="link-desc">&mdash; key finding: $2.5T gap hitting SMEs hardest</span></li>
+      <li><a href="https://www.dsi.iccwbo.org/">ICC Digital Standards Initiative</a> <span class="link-desc">&mdash; how the International Chamber of Commerce is digitizing trade documents</span></li>
     </ul>
   </div>
 </div>
@@ -290,11 +302,11 @@
 <div class="domain-body">
   <div class="problem">
     <div class="problem-title">Fractional real estate</div>
-    <p>The median US home price exceeds <a href="https://fred.stlouisfed.org/series/MSPUS">$400,000</a>. REITs offer some access but limit individual property selection. Tokenized fractional ownership could lower barriers while preserving investor control over specific assets.</p>
+    <p>The median US home price exceeds <a href="https://fred.stlouisfed.org/series/MSPUS">$400,000</a>. REITs (real estate investment trusts) offer some access but limit individual property selection. Tokenized fractional ownership could lower barriers while preserving investor control over specific assets.</p>
   </div>
   <div class="problem">
     <div class="problem-title">Private equity access</div>
-    <p>Global PE exceeds <a href="https://www.mckinsey.com/industries/private-equity-and-principal-investors/our-insights/global-private-markets-review">$4.7 trillion in AUM</a>, but accredited investor requirements lock out the vast majority of the population. Tokenized fund shares with programmable compliance could democratize access while maintaining regulatory guardrails.</p>
+    <p>Global private equity exceeds <a href="https://www.bain.com/insights/topics/global-private-equity-report/">$4.7 trillion in assets under management</a>, but accredited investor requirements lock out the vast majority of the population. Tokenized fund shares with programmable compliance could democratize access while maintaining regulatory guardrails.</p>
   </div>
   <div class="problem">
     <div class="problem-title">Illiquid asset secondary markets</div>
@@ -303,14 +315,15 @@
   <div class="meta-section">
     <div class="meta-label">Course Connections</div>
     <div class="tags">
-      <span class="tag">Unit 5: DeFi &amp; Smart Contracts</span>
-      <span class="tag">Unit 8: Tokenized Assets</span>
+      <span class="tag">Unit 5: Blockchain, Crypto &amp; DeFi</span>
+      <span class="tag">Unit 8: De-dollarization &amp; Digital Assets</span>
     </div>
-    <div class="meta-label">Starting Research</div>
+    <div class="meta-label">Where to Start Reading</div>
+    <p class="research-note">Use these to understand the landscape before choosing a specific problem.</p>
     <ul class="research-links">
-      <li><a href="https://www.mckinsey.com/industries/private-equity-and-principal-investors/our-insights/global-private-markets-review">McKinsey Global Private Markets Review</a></li>
-      <li><a href="https://fred.stlouisfed.org/series/MSPUS">FRED: Median US Home Price</a></li>
-      <li><a href="https://www.bcg.com/publications/2022/relevance-of-on-chain-asset-tokenization">BCG: On-Chain Asset Tokenization</a></li>
+      <li><a href="https://www.bain.com/insights/topics/global-private-equity-report/">Bain: Global Private Equity Report 2026</a> <span class="link-desc">&mdash; annual overview of PE deal activity, exits, and market trends</span></li>
+      <li><a href="https://fred.stlouisfed.org/series/MSPUS">FRED: Median US Home Price</a> <span class="link-desc">&mdash; interactive chart of housing prices over time</span></li>
+      <li><a href="https://www.bcg.com/publications/2022/relevance-of-on-chain-asset-tokenization">BCG: On-Chain Asset Tokenization</a> <span class="link-desc">&mdash; consulting analysis of which asset classes are most suited for tokenization</span></li>
     </ul>
   </div>
 </div>
@@ -322,14 +335,14 @@
   <div>
     <div class="domain-number">Domain 4</div>
     <div class="domain-title">Digital Identity &amp; Credentials</div>
-    <div class="domain-tagline">KYC compliance, credential portability, self-sovereign identity</div>
+    <div class="domain-tagline">Know Your Customer (KYC) compliance, credential portability, self-sovereign identity</div>
   </div>
   <span class="chevron">&#9660;</span>
 </div>
 <div class="domain-body">
   <div class="problem">
-    <div class="problem-title">KYC/AML compliance costs</div>
-    <p>Financial institutions spend an estimated <a href="https://risk.lexisnexis.com/insights-resources/research/true-cost-of-financial-crime-compliance-study-global-report">$214 billion annually</a> on compliance. Each institution independently verifies the same customer from scratch. A shared, privacy-preserving verification layer could eliminate duplicated work without centralizing sensitive data.</p>
+    <div class="problem-title">Know Your Customer (KYC) compliance costs</div>
+    <p>Financial institutions are required to verify the identity of every customer before opening an account&mdash;a process called Know Your Customer, or KYC. Globally, institutions spend an estimated <a href="https://risk.lexisnexis.com/insights-resources/research/true-cost-of-financial-crime-compliance-study-global-report">$214 billion annually</a> on this and related anti-money-laundering compliance. Each institution independently verifies the same customer from scratch. A shared, privacy-preserving verification layer could eliminate duplicated work without centralizing sensitive data.</p>
   </div>
   <div class="problem">
     <div class="problem-title">Educational credential portability</div>
@@ -337,19 +350,20 @@
   </div>
   <div class="problem">
     <div class="problem-title">Self-sovereign identity for the unbanked</div>
-    <p>Many of the 1.4 billion unbanked adults worldwide lack government-issued identification, which is a prerequisite for opening any financial account. Decentralized identity systems could allow individuals to build verifiable reputations without depending on a single issuing authority.</p>
+    <p>Many of the 1.4 billion unbanked adults worldwide lack government-issued identification, which is a prerequisite for opening any financial account. Self-sovereign identity&mdash;where individuals own and control their own credentials instead of depending on a single government or company to issue them&mdash;could allow people to build verifiable reputations without a central authority.</p>
   </div>
   <div class="meta-section">
     <div class="meta-label">Course Connections</div>
     <div class="tags">
-      <span class="tag">Unit 5: Blockchain Fundamentals</span>
-      <span class="tag">Unit 7: CBDC Privacy &amp; KYC</span>
+      <span class="tag">Unit 5: Blockchain, Crypto &amp; DeFi</span>
+      <span class="tag">Unit 7: CBDCs</span>
     </div>
-    <div class="meta-label">Starting Research</div>
+    <div class="meta-label">Where to Start Reading</div>
+    <p class="research-note">Use these to understand the landscape before choosing a specific problem.</p>
     <ul class="research-links">
-      <li><a href="https://www.weforum.org/projects/digital-identity">WEF: Digital Identity</a></li>
-      <li><a href="https://risk.lexisnexis.com/insights-resources/research/true-cost-of-financial-crime-compliance-study-global-report">LexisNexis Risk: True Cost of Compliance</a></li>
-      <li><a href="https://www.w3.org/TR/did-core/">W3C: Decentralized Identifiers</a></li>
+      <li><a href="https://www.coindesk.com/learn/what-is-kyc-and-why-does-it-matter-for-crypto/">CoinDesk: What Is KYC?</a> <span class="link-desc">&mdash; accessible explainer of how identity verification works in crypto</span></li>
+      <li><a href="https://id2020.org/">ID2020: Digital Identity Alliance</a> <span class="link-desc">&mdash; nonprofit working on ethical, privacy-preserving digital ID systems</span></li>
+      <li><a href="https://risk.lexisnexis.com/insights-resources/research/true-cost-of-financial-crime-compliance-study-global-report">LexisNexis Risk: True Cost of Compliance</a> <span class="link-desc">&mdash; annual survey of what financial institutions spend on identity verification</span></li>
     </ul>
   </div>
 </div>
@@ -371,8 +385,8 @@
     <p>The voluntary carbon market reached <a href="https://icvcm.org/">$2 billion in 2022</a>, but investigations have found that many offset categories may not represent real emission reductions. Tokenized carbon credits with on-chain verification could establish provenance and prevent double-counting.</p>
   </div>
   <div class="problem">
-    <div class="problem-title">Renewable energy certificate trading</div>
-    <p>RECs verify renewable generation, but markets are fragmented and small generators are often excluded. Tokenized RECs could enable real-time settlement and lower participation barriers for rooftop solar and community installations.</p>
+    <div class="problem-title">Renewable energy certificate (REC) trading</div>
+    <p>Renewable energy certificates, or RECs, are tradable documents that verify electricity was generated from a renewable source. Markets for RECs are fragmented and small generators are often excluded. Tokenized RECs could enable real-time settlement and lower participation barriers for rooftop solar and community installations.</p>
   </div>
   <div class="problem">
     <div class="problem-title">Peer-to-peer energy trading</div>
@@ -381,14 +395,15 @@
   <div class="meta-section">
     <div class="meta-label">Course Connections</div>
     <div class="tags">
-      <span class="tag">Unit 5: Smart Contracts</span>
-      <span class="tag">Unit 8: Tokenized Commodities</span>
+      <span class="tag">Unit 5: Blockchain, Crypto &amp; DeFi</span>
+      <span class="tag">Unit 8: De-dollarization &amp; Digital Assets</span>
     </div>
-    <div class="meta-label">Starting Research</div>
+    <div class="meta-label">Where to Start Reading</div>
+    <p class="research-note">Use these to understand the landscape before choosing a specific problem.</p>
     <ul class="research-links">
-      <li><a href="https://icvcm.org/">ICVCM: Voluntary Carbon Market Standards</a></li>
-      <li><a href="https://www.iea.org/topics/renewables">IEA: Renewables Tracking</a></li>
-      <li><a href="https://www.powerledger.io/">Powerledger: Energy Trading Platform</a></li>
+      <li><a href="https://ourworldindata.org/renewable-energy">Our World in Data: Renewable Energy</a> <span class="link-desc">&mdash; interactive charts tracking global renewable energy generation by source</span></li>
+      <li><a href="https://ourworldindata.org/carbon-pricing">Our World in Data: Carbon Pricing</a> <span class="link-desc">&mdash; which countries have carbon taxes or cap-and-trade systems, with data visualizations</span></li>
+      <li><a href="https://www.energy.gov/eere/solar/community-solar-basics">DOE: Community Solar Basics</a> <span class="link-desc">&mdash; how shared solar projects work and why access is uneven</span></li>
     </ul>
   </div>
 </div>
@@ -411,7 +426,7 @@
   </div>
   <div class="problem">
     <div class="problem-title">Community investment coordination</div>
-    <p>Neighborhood-level investment decisions (parks, infrastructure, small business support) are typically made by centralized authorities with limited community input. Token-based governance could give residents direct, proportional voice in how community development funds are allocated.</p>
+    <p>Neighborhood-level investment decisions (parks, infrastructure, small business support) are typically made by centralized authorities with limited community input. Token-based governance&mdash;sometimes organized as a decentralized autonomous organization, or DAO, where token holders vote directly on proposals&mdash;could give residents direct, proportional voice in how community development funds are allocated.</p>
   </div>
   <div class="problem">
     <div class="problem-title">Transparent charitable giving</div>
@@ -420,19 +435,19 @@
   <div class="meta-section">
     <div class="meta-label">Course Connections</div>
     <div class="tags">
-      <span class="tag">Unit 4: Collective Market Action</span>
-      <span class="tag">Unit 5: DAOs &amp; DeFi Governance</span>
+      <span class="tag">Unit 4: Markets &amp; Algorithmic Trading</span>
+      <span class="tag">Unit 5: Blockchain, Crypto &amp; DeFi</span>
     </div>
-    <div class="meta-label">Starting Research</div>
+    <div class="meta-label">Where to Start Reading</div>
+    <p class="research-note">Use these to understand the landscape before choosing a specific problem.</p>
     <ul class="research-links">
-      <li><a href="https://wtfisqf.com/">WTF is QF? (Quadratic Funding)</a></li>
-      <li><a href="https://givingusa.org/">Giving USA Annual Report</a></li>
-      <li><a href="https://vitalik.eth.limo/general/2021/11/16/retro1.html">Buterin: Retroactive Public Goods Funding</a></li>
+      <li><a href="https://wtfisqf.com/">WTF is QF? (Quadratic Funding Explainer)</a> <span class="link-desc">&mdash; visual, beginner-friendly explanation of how quadratic funding works</span></li>
+      <li><a href="https://www.coindesk.com/learn/what-is-a-dao/">CoinDesk: What Is a DAO?</a> <span class="link-desc">&mdash; how decentralized autonomous organizations make decisions with token voting</span></li>
+      <li><a href="https://vitalik.eth.limo/general/2021/11/16/retro1.html">Buterin: Retroactive Public Goods Funding</a> <span class="link-desc">&mdash; Ethereum co-founder's argument for rewarding public goods after impact is proven</span></li>
     </ul>
   </div>
 </div>
 </div>
-
 
 <script>
 // All cards start closed except the first
